@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+	<appender name="stdout" class="ch.qos.logback.core.ConsoleAppender">
+		<encoder>
+			<pattern>%date [%thread] %-5level %logger{36} - %msg%n
+			</pattern>
+		</encoder>
+	</appender>
+
+	<appender name="rollingFile"
+		class="ch.qos.logback.core.rolling.RollingFileAppender">
+		<file>${APP_HOME}/logs/hz_dbsync_server.log</file>
+		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+			<fileNamePattern>${APP_HOME}/logs/hz_dbsync_server.%d{yyyy-MM-dd}.log
+			</fileNamePattern>
+			<maxHistory>10</maxHistory>
+		</rollingPolicy>
+		<encoder>
+			<pattern>%date [%thread] %-5level %logger{36} - %msg%n
+			</pattern>
+		</encoder>
+	</appender>
+
+	<appender name="duplicateduser_rollingFile"
+		class="ch.qos.logback.core.rolling.RollingFileAppender">
+		<file>${APP_HOME}/logs/hz_dbsync_duplicateduser.log</file>
+		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+			<fileNamePattern>${APP_HOME}/logs/hz_dbsync_duplicateduser.log.%d{yyyy-MM-dd}.log
+			</fileNamePattern>
+			<maxHistory>10</maxHistory>
+		</rollingPolicy>
+		<encoder>
+			<pattern>%date [%thread] %-5level %logger{36} - %msg%n
+			</pattern>
+		</encoder>
+	</appender>
+
+	<appender name="async-stdout" class="ch.qos.logback.classic.AsyncAppender">
+		<appender-ref ref="stdout" />
+		<includeCallerData>true</includeCallerData>
+	</appender>
+	<appender name="async-rollingFile" class="ch.qos.logback.classic.AsyncAppender">
+		<appender-ref ref="rollingFile" />
+		<includeCallerData>true</includeCallerData>
+	</appender>
+	<appender name="async_duplicateduser_rollingFile" class="ch.qos.logback.classic.AsyncAppender">
+		<appender-ref ref="duplicateduser_rollingFile" />
+		<includeCallerData>true</includeCallerData>
+	</appender>
+
+	<logger name="com.hzins">
+		<level value="INFO" />
+	</logger>
+	
+	<logger name="data.duplicateduser" additivity="false">
+		<level value="INFO" />
+		<appender-ref ref="async_duplicateduser_rollingFile" />
+	</logger>
+	
+	<root level="INFO">
+		<!-- <appender-ref ref="async-stdout" /> -->
+		<appender-ref ref="async-rollingFile" />
+	</root>
+</configuration>

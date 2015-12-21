@@ -2,12 +2,10 @@ package com.hzins.dbsync;
 
 import java.sql.Connection;
 import java.sql.SQLException;
-import java.util.HashMap;
-import java.util.LinkedList;
-import java.util.List;
 import java.util.Map;
 import java.util.concurrent.BlockingQueue;
 import java.util.concurrent.TimeUnit;
+import java.util.concurrent.atomic.AtomicLong;
 
 import javax.sql.DataSource;
 
@@ -20,23 +18,25 @@ public class SyncJob implements Runnable {
 	private DataSource targetDs;
 	private BlockingQueue<JobDef> jobQueue;
 	private JobStat jobStat;
+	private AtomicLong ID;
 
-	public SyncJob(DataSource sourceDs, DataSource targetDs, BlockingQueue<JobDef> jobQueue, JobStat jobStat) {
+	public SyncJob(DataSource sourceDs, DataSource targetDs, BlockingQueue<JobDef> jobQueue, JobStat jobStat, AtomicLong id) {
 		super();
 		this.sourceDs = sourceDs;
 		this.targetDs = targetDs;
 		this.jobQueue = jobQueue;
 		this.jobStat = jobStat;
+		this.ID = id;
 	}
 
 	@Override
 	public void run() {
-		try {
-			while (true) {
+		while (true) {
+			try {
 				if (this.jobQueue.size() <= 0) {
 					return;
 				}
-				JobDef jobDef = this.jobQueue.poll(5, TimeUnit.SECONDS);
+				JobDef jobDef = this.jobQueue.poll(3, TimeUnit.SECONDS);
 				if (jobDef == null) {
 					return;
 				}
@@ -45,9 +45,9 @@ public class SyncJob implements Runnable {
 				// do database sync
 				Map<Long, AccountMigration> accountMigMap = extractAndTranslateSource(jobDef);
 				this.loadToTarget(accountMigMap, jobDef);
+			} catch (Exception e) {
+				ConsoleLogger.error(e.getMessage(), e);
 			}
-		} catch (Exception e) {
-			e.printStackTrace();
 		}
 	}
 
@@ -56,6 +56,7 @@ public class SyncJob implements Runnable {
 		Connection targetConn = this.targetDs.getConnection();
 		try {
 			// need transaction, as we will operate database in batch mode
+			// NOTE: why the loader will get very slow if remove transaction??
 			targetConn.setAutoCommit(false);
 			this.loadTarget(targetConn, accountMigMap);
 			targetConn.commit();
@@ -92,7 +93,7 @@ public class SyncJob implements Runnable {
 
 	protected Map<Long, AccountMigration> extractSource(Connection sourceConn, JobDef jobDef) throws SQLException {
 		AccountExtractor extractor = new AccountExtractor();
-		return extractor.extract(sourceConn, jobDef, jobStat);
+		return extractor.extract(sourceConn, jobDef, jobStat, ID);
 	}
 
 }

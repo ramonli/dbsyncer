@@ -1,7 +1,6 @@
 package com.hzins.dbsync.source.sqlserver;
 
 import java.sql.Connection;
-import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.Statement;
 
@@ -35,10 +34,10 @@ public class SqlServerConnection {
 //			dbConn = DriverManager.getConnection(dbURL, userName, userPwd);
 			dbConn = cpds.getConnection();
 			Statement sql = dbConn.createStatement();
-			ResultSet rs = sql.executeQuery("select top 10 userid from Account");
+			ResultSet rs = sql.executeQuery("select UserName from Account where UserId=1");
 			System.out.println("Connection Successful!"); // 如果连接成功 控制台输出Connection Successful!
 			while (rs.next()) {
-				System.out.println("<td>" + rs.getLong(1) + "</td>");
+				System.out.println("<td>" + rs.getString(1) + "</td>");
 			}
 
 			dbConn.close();

@@ -1,0 +1,169 @@
+2015-12-21 17:40:55,857 [MLog-Init-Reporter] INFO  com.mchange.v2.log.MLog - MLog clients using slf4j logging.
+2015-12-21 17:40:55,946 [main] INFO  com.mchange.v2.c3p0.C3P0Registry - Initializing c3p0-0.9.5.2 [built 08-December-2015 22:06:04 -0800; debug? true; trace: 10]
+2015-12-21 17:40:56,017 [main] INFO  com.hzins.dbsync.ConsoleLogger - Init source datasource successfully.
+2015-12-21 17:40:56,027 [main] INFO  com.hzins.dbsync.ConsoleLogger - Init target datasource successfully.
+2015-12-21 17:40:56,043 [main] INFO  c.m.v.c.i.AbstractPoolBackedDataSource - Initializing c3p0 pool... com.mchange.v2.c3p0.ComboPooledDataSource [ acquireIncrement -> 5, acquireRetryAttempts -> 30, acquireRetryDelay -> 1000, autoCommitOnClose -> false, automaticTestTable -> null, breakAfterAcquireFailure -> false, checkoutTimeout -> 0, connectionCustomizerClassName -> null, connectionTesterClassName -> com.mchange.v2.c3p0.impl.DefaultConnectionTester, contextClassLoaderSource -> caller, dataSourceName -> 1hge3hy9d1icx6mi1mjpb5j|92992c, debugUnreturnedConnectionStackTraces -> false, description -> null, driverClass -> com.microsoft.sqlserver.jdbc.SQLServerDriver, extensions -> {}, factoryClassLocation -> null, forceIgnoreUnresolvedTransactions -> false, forceSynchronousCheckins -> false, forceUseNamedDriverClass -> false, identityToken -> 1hge3hy9d1icx6mi1mjpb5j|92992c, idleConnectionTestPeriod -> 0, initialPoolSize -> 20, jdbcUrl -> jdbc:sqlserver://172.16.17.81:1433;DatabaseName=HzInsCore, maxAdministrativeTaskTime -> 0, maxConnectionAge -> 0, maxIdleTime -> 0, maxIdleTimeExcessConnections -> 0, maxPoolSize -> 40, maxStatements -> 0, maxStatementsPerConnection -> 0, minPoolSize -> 20, numHelperThreads -> 3, preferredTestQuery -> null, privilegeSpawnedThreads -> false, properties -> {user=******, password=******}, propertyCycle -> 0, statementCacheNumDeferredCloseThreads -> 0, testConnectionOnCheckin -> false, testConnectionOnCheckout -> false, unreturnedConnectionTimeout -> 0, userOverrides -> {}, usesTraditionalReflectiveProxies -> false ]
+2015-12-21 17:40:56,283 [main] INFO  com.hzins.dbsync.ConsoleLogger - Prepare to sync data between SqlServer and Mysql.
+2015-12-21 17:40:56,283 [main] INFO  com.hzins.dbsync.ConsoleLogger - Count of worker thread: 20
+2015-12-21 17:40:56,283 [main] INFO  com.hzins.dbsync.ConsoleLogger - minId of account: 0
+2015-12-21 17:40:56,283 [main] INFO  com.hzins.dbsync.ConsoleLogger - maxId of account: 424325
+2015-12-21 17:40:56,283 [main] INFO  com.hzins.dbsync.ConsoleLogger - --------------------------------
+2015-12-21 17:40:57,970 [pool-1-thread-5] INFO  c.m.v.c.i.AbstractPoolBackedDataSource - Initializing c3p0 pool... com.mchange.v2.c3p0.ComboPooledDataSource [ acquireIncrement -> 5, acquireRetryAttempts -> 30, acquireRetryDelay -> 1000, autoCommitOnClose -> false, automaticTestTable -> null, breakAfterAcquireFailure -> false, checkoutTimeout -> 0, connectionCustomizerClassName -> null, connectionTesterClassName -> com.mchange.v2.c3p0.impl.DefaultConnectionTester, contextClassLoaderSource -> caller, dataSourceName -> 1hge3hy9d1icx6mi1mjpb5j|11c0dc6, debugUnreturnedConnectionStackTraces -> false, description -> null, driverClass -> com.mysql.jdbc.Driver, extensions -> {}, factoryClassLocation -> null, forceIgnoreUnresolvedTransactions -> false, forceSynchronousCheckins -> false, forceUseNamedDriverClass -> false, identityToken -> 1hge3hy9d1icx6mi1mjpb5j|11c0dc6, idleConnectionTestPeriod -> 0, initialPoolSize -> 20, jdbcUrl -> jdbc:mysql://localhost:3306/red_env, maxAdministrativeTaskTime -> 0, maxConnectionAge -> 0, maxIdleTime -> 0, maxIdleTimeExcessConnections -> 0, maxPoolSize -> 40, maxStatements -> 0, maxStatementsPerConnection -> 0, minPoolSize -> 20, numHelperThreads -> 3, preferredTestQuery -> null, privilegeSpawnedThreads -> false, properties -> {user=******, password=******}, propertyCycle -> 0, statementCacheNumDeferredCloseThreads -> 0, testConnectionOnCheckin -> false, testConnectionOnCheckout -> false, unreturnedConnectionTimeout -> 0, userOverrides -> {}, usesTraditionalReflectiveProxies -> false ]
+2015-12-21 17:41:01,289 [main] INFO  com.hzins.dbsync.ConsoleLogger - Account created: 5522
+2015-12-21 17:41:01,289 [main] INFO  com.hzins.dbsync.ConsoleLogger - Account Balance created: 11044
+2015-12-21 17:41:01,289 [main] INFO  com.hzins.dbsync.ConsoleLogger - Account Fund Log created: 272
+2015-12-21 17:41:06,289 [main] INFO  com.hzins.dbsync.ConsoleLogger - Account created: 13369
+2015-12-21 17:41:06,289 [main] INFO  com.hzins.dbsync.ConsoleLogger - Account Balance created: 26596
+2015-12-21 17:41:06,289 [main] INFO  com.hzins.dbsync.ConsoleLogger - Account Fund Log created: 310
+2015-12-21 17:41:11,290 [main] INFO  com.hzins.dbsync.ConsoleLogger - Account created: 19701
+2015-12-21 17:41:11,290 [main] INFO  com.hzins.dbsync.ConsoleLogger - Account Balance created: 39402
+2015-12-21 17:41:11,290 [main] INFO  com.hzins.dbsync.ConsoleLogger - Account Fund Log created: 320
+2015-12-21 17:41:16,290 [main] INFO  com.hzins.dbsync.ConsoleLogger - Account created: 27821
+2015-12-21 17:41:16,290 [main] INFO  com.hzins.dbsync.ConsoleLogger - Account Balance created: 55642
+2015-12-21 17:41:16,290 [main] INFO  com.hzins.dbsync.ConsoleLogger - Account Fund Log created: 325
+2015-12-21 17:41:21,291 [main] INFO  com.hzins.dbsync.ConsoleLogger - Account created: 37670
+2015-12-21 17:41:21,291 [main] INFO  com.hzins.dbsync.ConsoleLogger - Account Balance created: 73846
+2015-12-21 17:41:21,291 [main] INFO  com.hzins.dbsync.ConsoleLogger - Account Fund Log created: 329
+2015-12-21 17:41:26,291 [main] INFO  com.hzins.dbsync.ConsoleLogger - Account created: 44506
+2015-12-21 17:41:26,291 [main] INFO  com.hzins.dbsync.ConsoleLogger - Account Balance created: 88678
+2015-12-21 17:41:26,291 [main] INFO  com.hzins.dbsync.ConsoleLogger - Account Fund Log created: 373
+2015-12-21 17:41:31,292 [main] INFO  com.hzins.dbsync.ConsoleLogger - Account created: 52817
+2015-12-21 17:41:31,292 [main] INFO  com.hzins.dbsync.ConsoleLogger - Account Balance created: 104660
+2015-12-21 17:41:31,292 [main] INFO  com.hzins.dbsync.ConsoleLogger - Account Fund Log created: 384
+2015-12-21 17:41:36,292 [main] INFO  com.hzins.dbsync.ConsoleLogger - Account created: 59565
+2015-12-21 17:41:36,292 [main] INFO  com.hzins.dbsync.ConsoleLogger - Account Balance created: 119130
+2015-12-21 17:41:36,292 [main] INFO  com.hzins.dbsync.ConsoleLogger - Account Fund Log created: 384
+2015-12-21 17:41:41,293 [main] INFO  com.hzins.dbsync.ConsoleLogger - Account created: 66341
+2015-12-21 17:41:41,293 [main] INFO  com.hzins.dbsync.ConsoleLogger - Account Balance created: 132682
+2015-12-21 17:41:41,293 [main] INFO  com.hzins.dbsync.ConsoleLogger - Account Fund Log created: 384
+2015-12-21 17:41:46,293 [main] INFO  com.hzins.dbsync.ConsoleLogger - Account created: 73757
+2015-12-21 17:41:46,293 [main] INFO  com.hzins.dbsync.ConsoleLogger - Account Balance created: 147514
+2015-12-21 17:41:46,293 [main] INFO  com.hzins.dbsync.ConsoleLogger - Account Fund Log created: 386
+2015-12-21 17:41:51,294 [main] INFO  com.hzins.dbsync.ConsoleLogger - Account created: 83976
+2015-12-21 17:41:51,294 [main] INFO  com.hzins.dbsync.ConsoleLogger - Account Balance created: 167152
+2015-12-21 17:41:51,294 [main] INFO  com.hzins.dbsync.ConsoleLogger - Account Fund Log created: 389
+2015-12-21 17:41:56,294 [main] INFO  com.hzins.dbsync.ConsoleLogger - Account created: 92862
+2015-12-21 17:41:56,294 [main] INFO  com.hzins.dbsync.ConsoleLogger - Account Balance created: 185324
+2015-12-21 17:41:56,294 [main] INFO  com.hzins.dbsync.ConsoleLogger - Account Fund Log created: 389
+2015-12-21 17:42:01,295 [main] INFO  com.hzins.dbsync.ConsoleLogger - Account created: 102438
+2015-12-21 17:42:01,295 [main] INFO  com.hzins.dbsync.ConsoleLogger - Account Balance created: 204876
+2015-12-21 17:42:01,295 [main] INFO  com.hzins.dbsync.ConsoleLogger - Account Fund Log created: 396
+2015-12-21 17:42:06,295 [main] INFO  com.hzins.dbsync.ConsoleLogger - Account created: 110228
+2015-12-21 17:42:06,295 [main] INFO  com.hzins.dbsync.ConsoleLogger - Account Balance created: 220456
+2015-12-21 17:42:06,295 [main] INFO  com.hzins.dbsync.ConsoleLogger - Account Fund Log created: 397
+2015-12-21 17:42:11,296 [main] INFO  com.hzins.dbsync.ConsoleLogger - Account created: 118257
+2015-12-21 17:42:11,296 [main] INFO  com.hzins.dbsync.ConsoleLogger - Account Balance created: 236514
+2015-12-21 17:42:11,296 [main] INFO  com.hzins.dbsync.ConsoleLogger - Account Fund Log created: 411
+2015-12-21 17:42:16,296 [main] INFO  com.hzins.dbsync.ConsoleLogger - Account created: 124414
+2015-12-21 17:42:16,296 [main] INFO  com.hzins.dbsync.ConsoleLogger - Account Balance created: 248828
+2015-12-21 17:42:16,296 [main] INFO  com.hzins.dbsync.ConsoleLogger - Account Fund Log created: 422
+2015-12-21 17:42:21,300 [main] INFO  com.hzins.dbsync.ConsoleLogger - Account created: 132084
+2015-12-21 17:42:21,301 [main] INFO  com.hzins.dbsync.ConsoleLogger - Account Balance created: 263314
+2015-12-21 17:42:21,301 [main] INFO  com.hzins.dbsync.ConsoleLogger - Account Fund Log created: 426
+2015-12-21 17:42:26,301 [main] INFO  com.hzins.dbsync.ConsoleLogger - Account created: 139581
+2015-12-21 17:42:26,301 [main] INFO  com.hzins.dbsync.ConsoleLogger - Account Balance created: 279162
+2015-12-21 17:42:26,301 [main] INFO  com.hzins.dbsync.ConsoleLogger - Account Fund Log created: 953
+2015-12-21 17:42:31,302 [main] INFO  com.hzins.dbsync.ConsoleLogger - Account created: 145978
+2015-12-21 17:42:31,302 [main] INFO  com.hzins.dbsync.ConsoleLogger - Account Balance created: 290966
+2015-12-21 17:42:31,302 [main] INFO  com.hzins.dbsync.ConsoleLogger - Account Fund Log created: 2710
+2015-12-21 17:42:36,342 [main] INFO  com.hzins.dbsync.ConsoleLogger - Account created: 154438
+2015-12-21 17:42:36,342 [main] INFO  com.hzins.dbsync.ConsoleLogger - Account Balance created: 306828
+2015-12-21 17:42:36,343 [main] INFO  com.hzins.dbsync.ConsoleLogger - Account Fund Log created: 4229
+2015-12-21 17:42:41,344 [main] INFO  com.hzins.dbsync.ConsoleLogger - Account created: 159745
+2015-12-21 17:42:41,344 [main] INFO  com.hzins.dbsync.ConsoleLogger - Account Balance created: 319090
+2015-12-21 17:42:41,344 [main] INFO  com.hzins.dbsync.ConsoleLogger - Account Fund Log created: 5886
+2015-12-21 17:42:46,344 [main] INFO  com.hzins.dbsync.ConsoleLogger - Account created: 166815
+2015-12-21 17:42:46,344 [main] INFO  com.hzins.dbsync.ConsoleLogger - Account Balance created: 333438
+2015-12-21 17:42:46,344 [main] INFO  com.hzins.dbsync.ConsoleLogger - Account Fund Log created: 6914
+2015-12-21 17:42:51,345 [main] INFO  com.hzins.dbsync.ConsoleLogger - Account created: 174269
+2015-12-21 17:42:51,346 [main] INFO  com.hzins.dbsync.ConsoleLogger - Account Balance created: 348538
+2015-12-21 17:42:51,346 [main] INFO  com.hzins.dbsync.ConsoleLogger - Account Fund Log created: 8435
+2015-12-21 17:42:56,346 [main] INFO  com.hzins.dbsync.ConsoleLogger - Account created: 183908
+2015-12-21 17:42:56,346 [main] INFO  com.hzins.dbsync.ConsoleLogger - Account Balance created: 367816
+2015-12-21 17:42:56,346 [main] INFO  com.hzins.dbsync.ConsoleLogger - Account Fund Log created: 10573
+2015-12-21 17:43:01,347 [main] INFO  com.hzins.dbsync.ConsoleLogger - Account created: 189135
+2015-12-21 17:43:01,348 [main] INFO  com.hzins.dbsync.ConsoleLogger - Account Balance created: 378270
+2015-12-21 17:43:01,349 [main] INFO  com.hzins.dbsync.ConsoleLogger - Account Fund Log created: 11451
+2015-12-21 17:43:06,351 [main] INFO  com.hzins.dbsync.ConsoleLogger - Account created: 199691
+2015-12-21 17:43:06,351 [main] INFO  com.hzins.dbsync.ConsoleLogger - Account Balance created: 398510
+2015-12-21 17:43:06,352 [main] INFO  com.hzins.dbsync.ConsoleLogger - Account Fund Log created: 12954
+2015-12-21 17:43:11,353 [main] INFO  com.hzins.dbsync.ConsoleLogger - Account created: 207195
+2015-12-21 17:43:11,353 [main] INFO  com.hzins.dbsync.ConsoleLogger - Account Balance created: 412990
+2015-12-21 17:43:11,353 [main] INFO  com.hzins.dbsync.ConsoleLogger - Account Fund Log created: 14221
+2015-12-21 17:43:16,354 [main] INFO  com.hzins.dbsync.ConsoleLogger - Account created: 213511
+2015-12-21 17:43:16,354 [main] INFO  com.hzins.dbsync.ConsoleLogger - Account Balance created: 426754
+2015-12-21 17:43:16,354 [main] INFO  com.hzins.dbsync.ConsoleLogger - Account Fund Log created: 15291
+2015-12-21 17:43:21,355 [main] INFO  com.hzins.dbsync.ConsoleLogger - Account created: 218696
+2015-12-21 17:43:21,355 [main] INFO  com.hzins.dbsync.ConsoleLogger - Account Balance created: 437392
+2015-12-21 17:43:21,355 [main] INFO  com.hzins.dbsync.ConsoleLogger - Account Fund Log created: 17946
+2015-12-21 17:43:26,355 [main] INFO  com.hzins.dbsync.ConsoleLogger - Account created: 227094
+2015-12-21 17:43:26,355 [main] INFO  com.hzins.dbsync.ConsoleLogger - Account Balance created: 453700
+2015-12-21 17:43:26,355 [main] INFO  com.hzins.dbsync.ConsoleLogger - Account Fund Log created: 21048
+2015-12-21 17:43:31,356 [main] INFO  com.hzins.dbsync.ConsoleLogger - Account created: 233916
+2015-12-21 17:43:31,357 [main] INFO  com.hzins.dbsync.ConsoleLogger - Account Balance created: 467832
+2015-12-21 17:43:31,357 [main] INFO  com.hzins.dbsync.ConsoleLogger - Account Fund Log created: 24010
+2015-12-21 17:43:36,357 [main] INFO  com.hzins.dbsync.ConsoleLogger - Account created: 241307
+2015-12-21 17:43:36,357 [main] INFO  com.hzins.dbsync.ConsoleLogger - Account Balance created: 482114
+2015-12-21 17:43:36,357 [main] INFO  com.hzins.dbsync.ConsoleLogger - Account Fund Log created: 26512
+2015-12-21 17:43:41,358 [main] INFO  com.hzins.dbsync.ConsoleLogger - Account created: 249161
+2015-12-21 17:43:41,358 [main] INFO  com.hzins.dbsync.ConsoleLogger - Account Balance created: 497860
+2015-12-21 17:43:41,358 [main] INFO  com.hzins.dbsync.ConsoleLogger - Account Fund Log created: 29768
+2015-12-21 17:43:46,358 [main] INFO  com.hzins.dbsync.ConsoleLogger - Account created: 256113
+2015-12-21 17:43:46,358 [main] INFO  com.hzins.dbsync.ConsoleLogger - Account Balance created: 511876
+2015-12-21 17:43:46,358 [main] INFO  com.hzins.dbsync.ConsoleLogger - Account Fund Log created: 33714
+2015-12-21 17:43:51,362 [main] INFO  com.hzins.dbsync.ConsoleLogger - Account created: 262058
+2015-12-21 17:43:51,362 [main] INFO  com.hzins.dbsync.ConsoleLogger - Account Balance created: 524116
+2015-12-21 17:43:51,362 [main] INFO  com.hzins.dbsync.ConsoleLogger - Account Fund Log created: 38550
+2015-12-21 17:43:56,362 [main] INFO  com.hzins.dbsync.ConsoleLogger - Account created: 270074
+2015-12-21 17:43:56,362 [main] INFO  com.hzins.dbsync.ConsoleLogger - Account Balance created: 539754
+2015-12-21 17:43:56,362 [main] INFO  com.hzins.dbsync.ConsoleLogger - Account Fund Log created: 45473
+2015-12-21 17:44:01,363 [main] INFO  com.hzins.dbsync.ConsoleLogger - Account created: 278119
+2015-12-21 17:44:01,363 [main] INFO  com.hzins.dbsync.ConsoleLogger - Account Balance created: 556238
+2015-12-21 17:44:01,363 [main] INFO  com.hzins.dbsync.ConsoleLogger - Account Fund Log created: 51033
+2015-12-21 17:44:06,387 [main] INFO  com.hzins.dbsync.ConsoleLogger - Account created: 284953
+2015-12-21 17:44:06,387 [main] INFO  com.hzins.dbsync.ConsoleLogger - Account Balance created: 569116
+2015-12-21 17:44:06,387 [main] INFO  com.hzins.dbsync.ConsoleLogger - Account Fund Log created: 56963
+2015-12-21 17:44:11,388 [main] INFO  com.hzins.dbsync.ConsoleLogger - Account created: 292014
+2015-12-21 17:44:11,388 [main] INFO  com.hzins.dbsync.ConsoleLogger - Account Balance created: 583672
+2015-12-21 17:44:11,388 [main] INFO  com.hzins.dbsync.ConsoleLogger - Account Fund Log created: 62683
+2015-12-21 17:44:16,388 [main] INFO  com.hzins.dbsync.ConsoleLogger - Account created: 297292
+2015-12-21 17:44:16,388 [main] INFO  com.hzins.dbsync.ConsoleLogger - Account Balance created: 594584
+2015-12-21 17:44:16,388 [main] INFO  com.hzins.dbsync.ConsoleLogger - Account Fund Log created: 72438
+2015-12-21 17:44:21,389 [main] INFO  com.hzins.dbsync.ConsoleLogger - Account created: 303404
+2015-12-21 17:44:21,389 [main] INFO  com.hzins.dbsync.ConsoleLogger - Account Balance created: 606608
+2015-12-21 17:44:21,389 [main] INFO  com.hzins.dbsync.ConsoleLogger - Account Fund Log created: 81756
+2015-12-21 17:44:26,403 [main] INFO  com.hzins.dbsync.ConsoleLogger - Account created: 312090
+2015-12-21 17:44:26,403 [main] INFO  com.hzins.dbsync.ConsoleLogger - Account Balance created: 623214
+2015-12-21 17:44:26,403 [main] INFO  com.hzins.dbsync.ConsoleLogger - Account Fund Log created: 94098
+2015-12-21 17:44:31,543 [main] INFO  com.hzins.dbsync.ConsoleLogger - Account created: 319248
+2015-12-21 17:44:31,543 [main] INFO  com.hzins.dbsync.ConsoleLogger - Account Balance created: 637192
+2015-12-21 17:44:31,543 [main] INFO  com.hzins.dbsync.ConsoleLogger - Account Fund Log created: 109150
+2015-12-21 17:44:36,543 [main] INFO  com.hzins.dbsync.ConsoleLogger - Account created: 324911
+2015-12-21 17:44:36,543 [main] INFO  com.hzins.dbsync.ConsoleLogger - Account Balance created: 648888
+2015-12-21 17:44:36,544 [main] INFO  com.hzins.dbsync.ConsoleLogger - Account Fund Log created: 118457
+2015-12-21 17:44:41,549 [main] INFO  com.hzins.dbsync.ConsoleLogger - Account created: 332773
+2015-12-21 17:44:41,571 [main] INFO  com.hzins.dbsync.ConsoleLogger - Account Balance created: 664008
+2015-12-21 17:44:41,571 [main] INFO  com.hzins.dbsync.ConsoleLogger - Account Fund Log created: 129818
+2015-12-21 17:44:46,571 [main] INFO  com.hzins.dbsync.ConsoleLogger - Account created: 339604
+2015-12-21 17:44:46,571 [main] INFO  com.hzins.dbsync.ConsoleLogger - Account Balance created: 679208
+2015-12-21 17:44:46,571 [main] INFO  com.hzins.dbsync.ConsoleLogger - Account Fund Log created: 142147
+2015-12-21 17:44:51,573 [main] INFO  com.hzins.dbsync.ConsoleLogger - Account created: 346336
+2015-12-21 17:44:51,573 [main] INFO  com.hzins.dbsync.ConsoleLogger - Account Balance created: 691858
+2015-12-21 17:44:51,573 [main] INFO  com.hzins.dbsync.ConsoleLogger - Account Fund Log created: 151898
+2015-12-21 17:44:56,573 [main] INFO  com.hzins.dbsync.ConsoleLogger - Account created: 354645
+2015-12-21 17:44:56,573 [main] INFO  com.hzins.dbsync.ConsoleLogger - Account Balance created: 708510
+2015-12-21 17:44:56,573 [main] INFO  com.hzins.dbsync.ConsoleLogger - Account Fund Log created: 163162
+2015-12-21 17:45:01,574 [main] INFO  com.hzins.dbsync.ConsoleLogger - Account created: 358616
+2015-12-21 17:45:01,574 [main] INFO  com.hzins.dbsync.ConsoleLogger - Account Balance created: 717232
+2015-12-21 17:45:01,574 [main] INFO  com.hzins.dbsync.ConsoleLogger - Account Fund Log created: 168711
+2015-12-21 17:45:01,574 [main] INFO  com.hzins.dbsync.ConsoleLogger - --------------------------------
+2015-12-21 17:45:01,574 [main] INFO  com.hzins.dbsync.ConsoleLogger - Account read: 358616
+2015-12-21 17:45:01,574 [main] INFO  com.hzins.dbsync.ConsoleLogger - Account Balance read: 717232
+2015-12-21 17:45:01,574 [main] INFO  com.hzins.dbsync.ConsoleLogger - Account Balance Fund Log read: 3347
+2015-12-21 17:45:01,574 [main] INFO  com.hzins.dbsync.ConsoleLogger - Account GoldBean Fund Log read: 165364
+2015-12-21 17:45:01,574 [main] INFO  com.hzins.dbsync.ConsoleLogger - Account created: 358616
+2015-12-21 17:45:01,574 [main] INFO  com.hzins.dbsync.ConsoleLogger - Account Balance created: 717232
+2015-12-21 17:45:01,574 [main] INFO  com.hzins.dbsync.ConsoleLogger - Account Fund Log created: 168711
+2015-12-21 17:45:01,574 [main] INFO  com.hzins.dbsync.ConsoleLogger - Total elapsed time : 245.291 seconds
+2015-12-21 17:45:01,574 [main] INFO  com.hzins.dbsync.ConsoleLogger - --------------------------------
+2015-12-21 17:45:01,574 [main] INFO  com.hzins.dbsync.ConsoleLogger - Job Done! Remember to make the sequence of mycat be greater than max(id) of account table.

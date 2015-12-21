@@ -1,0 +1,47 @@
+2015-12-21 14:35:23,726 [MLog-Init-Reporter] INFO  com.mchange.v2.log.MLog - MLog clients using slf4j logging.
+2015-12-21 14:35:23,801 [main] INFO  com.mchange.v2.c3p0.C3P0Registry - Initializing c3p0-0.9.5.2 [built 08-December-2015 22:06:04 -0800; debug? true; trace: 10]
+2015-12-21 14:35:23,885 [main] INFO  c.m.v.c.i.AbstractPoolBackedDataSource - Initializing c3p0 pool... com.mchange.v2.c3p0.ComboPooledDataSource [ acquireIncrement -> 5, acquireRetryAttempts -> 30, acquireRetryDelay -> 1000, autoCommitOnClose -> false, automaticTestTable -> null, breakAfterAcquireFailure -> false, checkoutTimeout -> 0, connectionCustomizerClassName -> null, connectionTesterClassName -> com.mchange.v2.c3p0.impl.DefaultConnectionTester, contextClassLoaderSource -> caller, dataSourceName -> 1hge3hy9d1i6al0h1p018y9|1a1ad24, debugUnreturnedConnectionStackTraces -> false, description -> null, driverClass -> com.microsoft.sqlserver.jdbc.SQLServerDriver, extensions -> {}, factoryClassLocation -> null, forceIgnoreUnresolvedTransactions -> false, forceSynchronousCheckins -> false, forceUseNamedDriverClass -> false, identityToken -> 1hge3hy9d1i6al0h1p018y9|1a1ad24, idleConnectionTestPeriod -> 0, initialPoolSize -> 5, jdbcUrl -> jdbc:sqlserver://172.16.17.81:1433;DatabaseName=HzInsCore, maxAdministrativeTaskTime -> 0, maxConnectionAge -> 0, maxIdleTime -> 0, maxIdleTimeExcessConnections -> 0, maxPoolSize -> 20, maxStatements -> 0, maxStatementsPerConnection -> 0, minPoolSize -> 5, numHelperThreads -> 3, preferredTestQuery -> null, privilegeSpawnedThreads -> false, properties -> {user=******, password=******}, propertyCycle -> 0, statementCacheNumDeferredCloseThreads -> 0, testConnectionOnCheckin -> false, testConnectionOnCheckout -> false, unreturnedConnectionTimeout -> 0, userOverrides -> {}, usesTraditionalReflectiveProxies -> false ]
+2015-12-21 16:05:05,747 [MLog-Init-Reporter] INFO  com.mchange.v2.log.MLog - MLog clients using slf4j logging.
+2015-12-21 16:05:05,819 [main] INFO  com.mchange.v2.c3p0.C3P0Registry - Initializing c3p0-0.9.5.2 [built 08-December-2015 22:06:04 -0800; debug? true; trace: 10]
+2015-12-21 16:05:05,909 [main] INFO  com.hzins.dbsync.ConsoleLogger - Init source datasource successfully.
+2015-12-21 16:05:05,924 [main] INFO  com.hzins.dbsync.ConsoleLogger - Init target datasource successfully.
+2015-12-21 16:05:21,133 [MLog-Init-Reporter] INFO  com.mchange.v2.log.MLog - MLog clients using slf4j logging.
+2015-12-21 16:05:21,212 [main] INFO  com.mchange.v2.c3p0.C3P0Registry - Initializing c3p0-0.9.5.2 [built 08-December-2015 22:06:04 -0800; debug? true; trace: 10]
+2015-12-21 16:05:21,288 [main] INFO  com.hzins.dbsync.ConsoleLogger - Init source datasource successfully.
+2015-12-21 16:05:21,300 [main] INFO  com.hzins.dbsync.ConsoleLogger - Init target datasource successfully.
+2015-12-21 16:05:40,770 [MLog-Init-Reporter] INFO  com.mchange.v2.log.MLog - MLog clients using slf4j logging.
+2015-12-21 16:05:40,850 [main] INFO  com.mchange.v2.c3p0.C3P0Registry - Initializing c3p0-0.9.5.2 [built 08-December-2015 22:06:04 -0800; debug? true; trace: 10]
+2015-12-21 16:05:40,919 [main] INFO  com.hzins.dbsync.ConsoleLogger - Init source datasource successfully.
+2015-12-21 16:05:40,933 [main] INFO  com.hzins.dbsync.ConsoleLogger - Init target datasource successfully.
+2015-12-21 16:05:53,230 [MLog-Init-Reporter] INFO  com.mchange.v2.log.MLog - MLog clients using slf4j logging.
+2015-12-21 16:05:53,305 [main] INFO  com.mchange.v2.c3p0.C3P0Registry - Initializing c3p0-0.9.5.2 [built 08-December-2015 22:06:04 -0800; debug? true; trace: 10]
+2015-12-21 16:05:53,388 [main] INFO  com.hzins.dbsync.ConsoleLogger - Init source datasource successfully.
+2015-12-21 16:05:53,401 [main] INFO  com.hzins.dbsync.ConsoleLogger - Init target datasource successfully.
+2015-12-21 16:06:25,211 [MLog-Init-Reporter] INFO  com.mchange.v2.log.MLog - MLog clients using slf4j logging.
+2015-12-21 16:06:25,286 [main] INFO  com.mchange.v2.c3p0.C3P0Registry - Initializing c3p0-0.9.5.2 [built 08-December-2015 22:06:04 -0800; debug? true; trace: 10]
+2015-12-21 16:06:25,365 [main] INFO  com.hzins.dbsync.ConsoleLogger - Init source datasource successfully.
+2015-12-21 16:06:25,374 [main] INFO  com.hzins.dbsync.ConsoleLogger - Init target datasource successfully.
+2015-12-21 16:06:37,989 [MLog-Init-Reporter] INFO  com.mchange.v2.log.MLog - MLog clients using slf4j logging.
+2015-12-21 16:06:38,071 [main] INFO  com.mchange.v2.c3p0.C3P0Registry - Initializing c3p0-0.9.5.2 [built 08-December-2015 22:06:04 -0800; debug? true; trace: 10]
+2015-12-21 16:06:38,156 [main] INFO  com.hzins.dbsync.ConsoleLogger - Init source datasource successfully.
+2015-12-21 16:06:38,168 [main] INFO  com.hzins.dbsync.ConsoleLogger - Init target datasource successfully.
+2015-12-21 16:07:05,553 [MLog-Init-Reporter] INFO  com.mchange.v2.log.MLog - MLog clients using slf4j logging.
+2015-12-21 16:07:05,639 [main] INFO  com.mchange.v2.c3p0.C3P0Registry - Initializing c3p0-0.9.5.2 [built 08-December-2015 22:06:04 -0800; debug? true; trace: 10]
+2015-12-21 16:07:05,740 [main] INFO  com.hzins.dbsync.ConsoleLogger - Init source datasource successfully.
+2015-12-21 16:07:05,756 [main] INFO  com.hzins.dbsync.ConsoleLogger - Init target datasource successfully.
+2015-12-21 16:08:02,733 [MLog-Init-Reporter] INFO  com.mchange.v2.log.MLog - MLog clients using slf4j logging.
+2015-12-21 16:08:02,809 [main] INFO  com.mchange.v2.c3p0.C3P0Registry - Initializing c3p0-0.9.5.2 [built 08-December-2015 22:06:04 -0800; debug? true; trace: 10]
+2015-12-21 16:08:02,878 [main] INFO  com.hzins.dbsync.ConsoleLogger - Init source datasource successfully.
+2015-12-21 16:08:02,894 [main] INFO  com.hzins.dbsync.ConsoleLogger - Init target datasource successfully.
+2015-12-21 16:08:20,904 [MLog-Init-Reporter] INFO  com.mchange.v2.log.MLog - MLog clients using slf4j logging.
+2015-12-21 16:08:20,984 [main] INFO  com.mchange.v2.c3p0.C3P0Registry - Initializing c3p0-0.9.5.2 [built 08-December-2015 22:06:04 -0800; debug? true; trace: 10]
+2015-12-21 16:08:21,059 [main] INFO  com.hzins.dbsync.ConsoleLogger - Init source datasource successfully.
+2015-12-21 16:08:21,074 [main] INFO  com.hzins.dbsync.ConsoleLogger - Init target datasource successfully.
+2015-12-21 16:08:29,829 [MLog-Init-Reporter] INFO  com.mchange.v2.log.MLog - MLog clients using slf4j logging.
+2015-12-21 16:08:29,907 [main] INFO  com.mchange.v2.c3p0.C3P0Registry - Initializing c3p0-0.9.5.2 [built 08-December-2015 22:06:04 -0800; debug? true; trace: 10]
+2015-12-21 16:08:29,989 [main] INFO  com.hzins.dbsync.ConsoleLogger - Init source datasource successfully.
+2015-12-21 16:08:30,002 [main] INFO  com.hzins.dbsync.ConsoleLogger - Init target datasource successfully.
+2015-12-21 16:08:37,337 [MLog-Init-Reporter] INFO  com.mchange.v2.log.MLog - MLog clients using slf4j logging.
+2015-12-21 16:08:37,416 [main] INFO  com.mchange.v2.c3p0.C3P0Registry - Initializing c3p0-0.9.5.2 [built 08-December-2015 22:06:04 -0800; debug? true; trace: 10]
+2015-12-21 16:08:37,492 [main] INFO  com.hzins.dbsync.ConsoleLogger - Init source datasource successfully.
+2015-12-21 16:08:37,505 [main] INFO  com.hzins.dbsync.ConsoleLogger - Init target datasource successfully.

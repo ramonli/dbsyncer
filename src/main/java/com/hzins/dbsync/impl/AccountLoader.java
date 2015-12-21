@@ -2,12 +2,11 @@ package com.hzins.dbsync.impl;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
-import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.sql.Statement;
 import java.sql.Timestamp;
 import java.util.Collection;
 import java.util.Map;
+import java.util.concurrent.atomic.AtomicLong;
 
 import com.hzins.dbsync.ConsoleLogger;
 import com.hzins.dbsync.JobStat;
@@ -18,7 +17,7 @@ import com.hzins.dbsync.impl.domain.AccountCreateItem;
 import com.hzins.dbsync.impl.domain.AccountMigration;
 
 public class AccountLoader {
-	private int batchSize = 100;
+	private int batchSize = 200;
 	private static final String DEFAULT_RANDOM_KEY = "05e4f140f6bf35b0b836cbce3ae476a1";
 
 	public void loadTarget(Connection conn, Map<Long, AccountMigration> accountMigMap, JobStat jobStat) throws SQLException {
@@ -91,10 +90,12 @@ public class AccountLoader {
 		insertStat.close();
 	}
 
-	private void syncAccount(Connection conn, Collection<AccountMigration> accountMigs, JobStat jobStat) throws SQLException {
-		String sql = "insert into account(user_id, user_name,from_type, account_type,status,rand_key, create_time,update_time) values(?,?,?,?,?,?,?,?)";
+	private void syncAccount(Connection conn, Collection<AccountMigration> accountMigs,JobStat jobStat) throws SQLException {
+		String sql = "insert into account(user_id, user_name,source_type, account_type,status,rand_key, create_time,update_time,account_id) values(?,?,?,?,?,?,?,?,?)";
 		ConsoleLogger.debug("SQL: " + sql);
-		PreparedStatement batchInsert = conn.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS);
+//		PreparedStatement batchInsert = conn.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS);
+		PreparedStatement batchInsert = conn.prepareStatement(sql);
+		int count = 0;
 		for (AccountMigration accountMig : accountMigs) {
 			AccountCreateItem createItem = accountMig.getAccountCreateItem();
 			batchInsert.setLong(1, createItem.getUserId());
@@ -105,16 +106,25 @@ public class AccountLoader {
 			batchInsert.setString(6, DEFAULT_RANDOM_KEY);
 			batchInsert.setTimestamp(7, new Timestamp(createItem.getCreateTime().getTime()));
 			batchInsert.setTimestamp(8, new Timestamp(createItem.getUpdateTime().getTime()));
-			int count = batchInsert.executeUpdate();
-			jobStat.getWriteAccountCount().addAndGet(count);
+			batchInsert.setLong(9, accountMig.getAccountId());
+			batchInsert.addBatch();
+			count++;
+			// jobStat.getWriteAccountCount().addAndGet(count);
 
-			ResultSet rs = batchInsert.getGeneratedKeys();
-			while (rs.next()) {
-				long id = rs.getLong(1);
-				accountMig.setAccountId(id);
-				// ConsoleLogger.debug("id:" + id);
+			// ResultSet rs = batchInsert.getGeneratedKeys();
+			// while (rs.next()) {
+			// long id = rs.getLong(1);
+			// accountMig.setAccountId(id);
+			// // ConsoleLogger.debug("id:" + id);
+			// }
+			if (count % batchSize == 0) {
+				int[] rows = batchInsert.executeBatch();
+				jobStat.getWriteAccountCount().addAndGet(this.totalCount(rows));
 			}
 		}
+		int[] rows = batchInsert.executeBatch();
+		jobStat.getWriteAccountCount().addAndGet(this.totalCount(rows));
+
 		batchInsert.close();
 	}
 

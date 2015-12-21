@@ -7,7 +7,8 @@ public class JobStat {
 	private AtomicLong writeAccountCount = new AtomicLong(0);
 	private AtomicLong readBalanceCount = new AtomicLong(0);
 	private AtomicLong writeBalanceCount = new AtomicLong(0);
-	private AtomicLong readFundLogCount = new AtomicLong(0);
+	private AtomicLong readBalanceFundLogCount = new AtomicLong(0);
+	private AtomicLong readGoldBeanFundLogCount = new AtomicLong(0);
 	private AtomicLong writeFundLogCount = new AtomicLong(0);
 	private AtomicLong duplicatedAccountCount = new AtomicLong(0);
 
@@ -43,12 +44,20 @@ public class JobStat {
 		this.writeBalanceCount = writeBalanceCount;
 	}
 
-	public AtomicLong getReadFundLogCount() {
-		return readFundLogCount;
+	public AtomicLong getReadBalanceFundLogCount() {
+		return readBalanceFundLogCount;
 	}
 
-	public void setReadFundLogCount(AtomicLong readFundLogCount) {
-		this.readFundLogCount = readFundLogCount;
+	public void setReadBalanceFundLogCount(AtomicLong readBalanceFundLogCount) {
+		this.readBalanceFundLogCount = readBalanceFundLogCount;
+	}
+
+	public AtomicLong getReadGoldBeanFundLogCount() {
+		return readGoldBeanFundLogCount;
+	}
+
+	public void setReadGoldBeanFundLogCount(AtomicLong readGoldBeanFundLogCount) {
+		this.readGoldBeanFundLogCount = readGoldBeanFundLogCount;
 	}
 
 	public AtomicLong getWriteFundLogCount() {
